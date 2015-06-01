@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 import random
 import yaml
+try:
+    from yaml import CLoader as Loader
+except ImportError:
+    from yaml import Loader
 
 
 from address import Address
@@ -12,8 +16,11 @@ GENDER = (MALE, FEMALE)
 
 
 def yaml_load(file_path, mode='r'):
-    f = open(file_path, mode)
-    return yaml.load(f)
+    try:
+        f = open(file_path, mode)
+    except IOError:
+        raise("Can not open {}".format(file_path))
+    return yaml.load(f, Loader=Loader)
 
 
 
