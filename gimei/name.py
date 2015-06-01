@@ -54,22 +54,22 @@ class Name(object):
     @property
     def kanji(self):
         return u"{} {}".format(
-            self.first.kanji,
             self.last.kanji,
+            self.first.kanji,
         )
 
     @property
     def hiragana(self):
         return u"{} {}".format(
-            self.first.hiragana,
             self.last.hiragana,
+            self.first.hiragana,
         )
 
     @property
     def katakana(self):
         return u"{} {}".format(
-            self.first.katakana,
             self.last.katakana,
+            self.first.katakana,
         )
 
     @property
