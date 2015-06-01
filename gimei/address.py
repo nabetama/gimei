@@ -105,3 +105,6 @@ class Address(object):
             self.city.katakana,
             self.town.katakana,
         )
+
+    def __repr__(self):
+        return self.kanji.encode('utf-8')

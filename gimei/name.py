@@ -81,3 +81,6 @@ class Name(object):
     def is_female(self):
         from gimei import FEMALE
         return self.gender == FEMALE
+
+    def __repr__(self):
+        return self.kanji.encode('utf-8')
