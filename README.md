@@ -6,9 +6,7 @@ Original is [gimei](https://github.com/willnet/gimei).
 Thank's @willnet
 
 ## Installation
-```sh
-$ pip install gimei
-```
+XXX
 
 ## Usage
 
