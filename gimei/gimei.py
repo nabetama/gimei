@@ -19,7 +19,7 @@ def yaml_load(file_path, mode='r'):
     try:
         f = open(file_path, mode)
     except IOError:
-        raise("Can not open {}".format(file_path))
+        raise Exception("Can not open {}".format(file_path))
     return yaml.load(f, Loader=Loader)
 
 
