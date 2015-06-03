@@ -1,3 +1,8 @@
+Version 0.1.52
+~~~~~~~~~~~~~~
+
+Only just tidy.
+
 Version 0.1.51
 ~~~~~~~~~~~~~~
 
