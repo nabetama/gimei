@@ -15,8 +15,8 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=['pyyaml'],
-    provides=['gimei', 'false name', 'random'],
-    keywords=['gimei', 'false name', 'random'],
+    provides=['gimei', 'name', 'random'],
+    keywords=['gimei', 'name', 'random'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
