@@ -25,6 +25,11 @@ class name(object):
     def katakana(self):
         return self.all[2]
 
+    @classmethod
+    def get_all_names(cls):
+        from gimei import Gimei
+        return Gimei.NAMES[cls.__name__]
+
 
 class first_name(name):
     def __init__(self, gender=None):
@@ -84,3 +89,46 @@ class Name(object):
 
     def __repr__(self):
         return self.kanji.encode('utf-8')
+
+    @classmethod
+    def find_name_by_index(cls, name, idx):
+        from gimei import MALE, FEMALE
+        result = []
+
+        token = name.split(' ')
+        if len(token) != 2:
+            return None
+        first_names = first_name.get_all_names()
+        last_names = last_name.get_all_names()
+
+        for _names in last_names:
+            if _names[idx] == token[0]:
+                result.append(_names[idx])
+                break
+
+        for _names in first_names[MALE]:
+            if _names[idx] == token[1]:
+                result.append(token[1])
+                break
+
+        if len(result) != 2:
+            for _names in first_names[FEMALE]:
+                if _names[idx] == token[1]:
+                    result.append(token[1])
+                    break
+
+        if len(result) == 2:
+            return result
+        return None
+
+    @classmethod
+    def find_name_by_kanji(cls, kanji):
+        return cls.find_name_by_index(kanji, 0)
+
+    @classmethod
+    def find_name_by_hiragana(cls, hiragana):
+        return cls.find_name_by_index(hiragana, 1)
+
+    @classmethod
+    def find_name_by_katakana(cls, katakana):
+        return cls.find_name_by_index(katakana, 2)
