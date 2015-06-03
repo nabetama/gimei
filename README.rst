@@ -24,36 +24,36 @@ Usage
 
     name = Gimei().name
 
-    print name
-    print name.kanji
-    print name.hiragana
-    print name.katakana
-    print name.last.kanji
-    print name.last.hiragana
-    print name.last.katakana
-    print name.first.kanji
-    print name.first.hiragana
-    print name.first.katakana
+    print name                # 川端 一世 
+    print name.kanji          # 川端 一世
+    print name.hiragana       # かわばた ひとせ
+    print name.katakana       # カワバタ ヒトセ
+    print name.last.kanji     # 川端
+    print name.last.hiragana  # かわばた
+    print name.last.katakana  # カワバタ
+    print name.first.kanji    # 一世
+    print name.first.hiragana # ひとせ
+    print name.first.katakana # ヒトセ
 
 
-    address = Gimei().address
+    address = Gimei().address 
 
-    print address
-    print address.kanji
-    print address.hiragana
-    print address.katakana
+    print address             # 大分県三潴郡大木町小原西
+    print address.kanji       # 大分県三潴郡大木町小原西
+    print address.hiragana    # おおいたけんみずまぐんおおきまちこばらにし
+    print address.katakana    # オオイタケンミズマグンオオキマチコバラニシ
 
-    print address.prefecture.kanji
-    print address.prefecture.hiragana
-    print address.prefecture.katakana
+    print address.prefecture.kanji     # 大分県
+    print address.prefecture.hiragana  # おおいたけん
+    print address.prefecture.katakana  # オオイタケン
 
-    print address.city.kanji
-    print address.city.hiragana
-    print address.city.katakana
+    print address.city.kanji     # 三潴郡大木町
+    print address.city.hiragana  # みずまぐんおおきまち
+    print address.city.katakana  # ミズマグンオオキマチ
 
-    print address.town.kanji
-    print address.town.hiragana
-    print address.town.katakana
+    print address.town.kanji     # 小原西
+    print address.town.hiragana  # こばらにし
+    print address.town.katakana  # コバラニシ
 
 Recommendation
 --------------
