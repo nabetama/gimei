@@ -1,4 +1,8 @@
 # Gimei
+[![Downloads](https://pypip.in/download/gimei/badge.svg)](https://pypi.python.org/pypi/gimei/)
+[![Supported Python versions](https://pypip.in/py_versions/gimei/badge.svg)](https://pypi.python.org/pypi/gimei/)
+[![Latest Version](https://pypip.in/version/gimei/badge.svg?text=version)](https://pypi.python.org/pypi/gimei/)
+y![License](https://pypip.in/license/gimei/badge.svg)](https://pypi.python.org/pypi/gimei/)
 
 This package generates the name and the address at random.
 
