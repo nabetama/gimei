@@ -6,7 +6,9 @@ Original is [gimei](https://github.com/willnet/gimei).
 Thank's @willnet
 
 ## Installation
-XXX
+```sh
+$ pip install gimei
+```
 
 ## Usage
 
@@ -57,4 +59,6 @@ It's recommended hard to install [libyaml](http://pyyaml.org/wiki/LibYAML).
 MIT
 
 ## Author
-Mao Nabeta(@nabetama)
+Mao Nabeta
+
+[twitter](https://twitter.com/nabetama)
