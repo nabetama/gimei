@@ -6,7 +6,7 @@ with open("README.rst",  "rt") as f: readme = f.read()
 
 setup(
     name='gimei',
-    version="0.1.4",
+    version="0.1.5",
     description="generates the name and the address at random.",
     long_description=__doc__,
     author='Mao Nabeta',
