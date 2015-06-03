@@ -128,7 +128,6 @@ class Address(object):
 
     @classmethod
     def find_address_by_index(cls, a, idx):
-        from gimei import Gimei
         if not a:
             return None
 

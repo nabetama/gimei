@@ -5,10 +5,9 @@ try:
     from yaml import CLoader as Loader
 except ImportError:
     from yaml import Loader
-
-
 from address import Address
 from name import Name
+
 
 MALE = 'male'
 FEMALE = 'female'
@@ -25,7 +24,6 @@ def yaml_load(file_path, mode='r'):
     return yaml.load(f, Loader=Loader)
 
 
-
 class Gimei(object):
     NAMES = yaml_load('./data/names.yml')
     ADDRESSES = yaml_load('./data/addresses.yml')
@@ -34,7 +32,6 @@ class Gimei(object):
         if gender is None:
             gender = random.choice(GENDER)
         self.gender = gender
-
 
     @property
     def name(self):
