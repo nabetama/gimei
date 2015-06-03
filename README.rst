@@ -1,6 +1,8 @@
 Gimei
 =====
 
+|Downloads| |Supported Python versions| |Latest Version| |License|
+
 This package generates the name and the address at random.
 
 Original is `gimei <https://github.com/willnet/gimei>`__. Thank's
@@ -71,3 +73,12 @@ Author
 Mao Nabeta
 
 `twitter <https://twitter.com/nabetama>`__
+
+.. |Downloads| image:: https://pypip.in/download/gimei/badge.svg
+   :target: https://pypi.python.org/pypi/gimei/
+.. |Supported Python versions| image:: https://pypip.in/py_versions/gimei/badge.svg
+   :target: https://pypi.python.org/pypi/gimei/
+.. |Latest Version| image:: https://pypip.in/version/gimei/badge.svg?text=version
+   :target: https://pypi.python.org/pypi/gimei/
+.. |License| image:: https://pypip.in/license/gimei/badge.svg
+   :target: https://pypi.python.org/pypi/gimei/
