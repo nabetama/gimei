@@ -13,6 +13,8 @@ XXX
 ```python
 from gimei import Gimei
 
+name = Gimei().name
+
 print name
 print name.kanji
 print name.hiragana
