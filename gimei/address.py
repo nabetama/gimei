@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import random
-import yaml
+
+
+__all__ = ['Address']
 
 
 class Prefecture(object):
