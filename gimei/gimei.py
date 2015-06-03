@@ -16,10 +16,12 @@ GENDER = (MALE, FEMALE)
 
 
 def yaml_load(file_path, mode='r'):
+    import os
+    file_dir = os.path.abspath(os.path.join(os.path.dirname(__file__)))
     try:
-        f = open(file_path, mode)
+        f = open(file_dir + '/' + file_path, mode)
     except IOError:
-        raise Exception("Can not open {}".format(file_path))
+        raise Exception("Can not open {}".format(file_dir + '/' + file_path))
     return yaml.load(f, Loader=Loader)
 
 
