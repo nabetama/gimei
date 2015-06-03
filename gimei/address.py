@@ -108,3 +108,48 @@ class Address(object):
 
     def __repr__(self):
         return self.kanji.encode('utf-8')
+
+    @classmethod
+    def get_prefectures(cls):
+        from gimei import Gimei
+        return Gimei.ADDRESSES['addresses']['prefecture']
+
+    @classmethod
+    def get_cities(cls):
+        from gimei import Gimei
+        return Gimei.ADDRESSES['addresses']['city']
+
+    @classmethod
+    def get_towns(cls):
+        from gimei import Gimei
+        return Gimei.ADDRESSES['addresses']['town']
+
+    @classmethod
+    def find_address_by_index(cls, a, idx):
+        from gimei import Gimei
+        if not a:
+            return None
+
+        for prefecture in cls.get_prefectures():
+            if not a.startswith(prefecture[idx]):
+                continue
+            for city in cls.get_cities():
+                if not a.startswith(prefecture[idx] + city[idx]):
+                    continue
+                for town in cls.get_towns():
+                    if not a.startswith(prefecture[idx] + city[idx] + town[idx]):
+                        continue
+                    return prefecture[idx] + city[idx] + town[idx]
+        return None
+
+    @classmethod
+    def find_address_by_kanji(cls, kanji):
+        return cls.find_address_by_index(kanji, 0)
+
+    @classmethod
+    def find_address_by_hiragana(cls, hiragana):
+        return cls.find_address_by_index(hiragana, 1)
+
+    @classmethod
+    def find_address_by_katakana(cls, katakana):
+        return cls.find_address_by_index(katakana, 2)
