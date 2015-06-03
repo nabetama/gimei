@@ -6,7 +6,7 @@ with open("README.rst",  "rt") as f: readme = f.read()
 
 setup(
     name='gimei',
-    version="0.1",
+    version="0.1.1",
     description="generates the name and the address at random.",
     long_description=__doc__,
     author='Mao Nabeta',
@@ -17,6 +17,9 @@ setup(
     install_requires=['pyyaml'],
     provides=['gimei', 'name', 'random'],
     keywords=['gimei', 'name', 'random'],
+    data_files=[
+        ('gimei/data/', ['gimei/data/addresses.yml', 'gimei/data/names.yml']),
+    ],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
