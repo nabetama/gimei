@@ -1,8 +1,5 @@
 # Gimei
-[![Downloads](https://pypip.in/download/gimei/badge.svg)](https://pypi.python.org/pypi/gimei/)
-[![Supported Python versions](https://pypip.in/py_versions/gimei/badge.svg)](https://pypi.python.org/pypi/gimei/)
-[![Latest Version](https://pypip.in/version/gimei/badge.svg?text=version)](https://pypi.python.org/pypi/gimei/)
-[![License](https://pypip.in/license/gimei/badge.svg)](https://pypi.python.org/pypi/gimei/)
+[![wercker status](https://app.wercker.com/status/2e16506f61d42fa320a681aac332b30d/m "wercker status")](https://app.wercker.com/project/bykey/2e16506f61d42fa320a681aac332b30d)
 
 This package generates the name and the address at random.
 
