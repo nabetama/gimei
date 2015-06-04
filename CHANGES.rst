@@ -1,3 +1,8 @@
+Version 0.1.53
+~~~~~~~~~~~~~~
+
+Add wercker badge.
+
 Version 0.1.52
 ~~~~~~~~~~~~~~
 
