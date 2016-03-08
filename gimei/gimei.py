@@ -6,6 +6,7 @@ try:
 except ImportError:
     from yaml import Loader
 from address import Address
+from functools import wraps
 from name import Name
 
 
@@ -14,6 +15,19 @@ FEMALE = 'female'
 GENDER = (MALE, FEMALE)
 
 
+def cache(f):
+    saved = {}
+
+    @wraps(f)
+    def wrapper(file_path):
+        if file_path in saved:
+            return saved[file_path]
+        result = f(file_path, mode='r')
+        saved[file_path] = result
+        return result
+    return wrapper
+
+@cache
 def yaml_load(file_path, mode='r'):
     import os
     file_dir = os.path.abspath(os.path.join(os.path.dirname(__file__)))
