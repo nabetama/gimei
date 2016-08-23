@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 import random
 import yaml
+from functools import wraps
+
 try:
     from yaml import CLoader as Loader
 except ImportError:
     from yaml import Loader
-from address import Address
-from functools import wraps
-from name import Name
+
+from .address import Address
+from .name import Name
 
 
 MALE = 'male'
@@ -26,6 +28,7 @@ def cache(f):
         saved[file_path] = result
         return result
     return wrapper
+
 
 @cache
 def yaml_load(file_path, mode='r'):

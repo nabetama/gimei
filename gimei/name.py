@@ -7,11 +7,11 @@ __all__ = ['Name']
 
 class name(object):
     def is_male(self):
-        from gimei import MALE
+        from .gimei import MALE
         return self.gender == MALE
 
     def is_female(self):
-        from gimei import FEMALE
+        from .gimei import FEMALE
         return self.gender == FEMALE
 
     @property
@@ -28,22 +28,22 @@ class name(object):
 
     @classmethod
     def get_all_names(cls):
-        from gimei import Gimei
+        from .gimei import Gimei
         return Gimei.NAMES[cls.__name__]
 
 
 class first_name(name):
     def __init__(self, gender=None):
-        from gimei import GENDER
-        from gimei import Gimei
+        from .gimei import GENDER
+        from .gimei import Gimei
         self.gender = gender if gender is not None else random.choice(GENDER)
         self.all = random.choice(Gimei.NAMES[self.__class__.__name__][self.gender])
 
 
 class last_name(name):
     def __init__(self, gender=None):
-        from gimei import GENDER
-        from gimei import Gimei
+        from .gimei import GENDER
+        from .gimei import Gimei
         self.gender = gender if gender is not None else random.choice(GENDER)
         self.all = random.choice(Gimei.NAMES[self.__class__.__name__])
 
@@ -80,12 +80,12 @@ class Name(object):
 
     @property
     def is_male(self):
-        from gimei import MALE
+        from .gimei import MALE
         return self.gender == MALE
 
     @property
     def is_female(self):
-        from gimei import FEMALE
+        from .gimei import FEMALE
         return self.gender == FEMALE
 
     def __repr__(self):
@@ -93,7 +93,7 @@ class Name(object):
 
     @classmethod
     def find_name_by_index(cls, name, idx):
-        from gimei import MALE, FEMALE
+        from .gimei import MALE, FEMALE
         result = []
 
         token = name.split(' ')
