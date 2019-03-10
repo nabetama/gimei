@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 
 
-with open("README.rst",  "rt", encoding="utf-8") as f: readme = f.read()
-
+with open("README.rst",  "rt", encoding="utf-8") as f:
+    readme = f.read()
 
 setup(
     name='gimei',
-    version="0.1.6",
+    version="0.1.7",
     description="generates the name and the address at random.",
     long_description=__doc__,
     author='Mao Nabeta',
