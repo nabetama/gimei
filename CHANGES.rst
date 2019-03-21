@@ -1,3 +1,18 @@
+Version 0.2.3
+~~~~~~~~~~~~~
+
+Supported only Python 3. Add Makefile.
+
+Version 0.1.7.
+~~~~~~~~~~~~~~
+
+Default value of encoding is utf-8.
+
+Version 0.1.6.
+~~~~~~~~~~~~~~
+
+Supported python3.
+
 Version 0.1.53
 ~~~~~~~~~~~~~~
 
