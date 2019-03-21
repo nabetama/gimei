@@ -1,5 +1,4 @@
 # Gimei
-[![wercker status](https://app.wercker.com/status/2e16506f61d42fa320a681aac332b30d/m "wercker status")](https://app.wercker.com/project/bykey/2e16506f61d42fa320a681aac332b30d)
 
 This package generates the name and the address at random.
 
@@ -7,8 +6,17 @@ Original is [gimei](https://github.com/willnet/gimei).
 Thank's @willnet
 
 ## Installation
+
+### stable
+
 ```sh
 $ pip install gimei
+```
+
+### test version
+
+```sh
+pip install -i https://test.pypi.org/simple/ gimei
 ```
 
 ## Usage
