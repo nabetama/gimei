@@ -89,7 +89,8 @@ class Name(object):
         return self.gender == FEMALE
 
     def __repr__(self):
-        return self.kanji.encode('utf-8')
+        return "Name(gender='{}', first={}, last={})".format(self.gender,
+                                                             self.first.all, self.last.all)
 
     @classmethod
     def find_name_by_index(cls, name, idx):
