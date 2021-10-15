@@ -26,36 +26,36 @@ from gimei import Gimei
 
 name = Gimei().name
 
-print name                # 川端 一世 
-print name.kanji          # 川端 一世
-print name.hiragana       # かわばた ひとせ
-print name.katakana       # カワバタ ヒトセ
-print name.last.kanji     # 川端
-print name.last.hiragana  # かわばた
-print name.last.katakana  # カワバタ
-print name.first.kanji    # 一世
-print name.first.hiragana # ひとせ
-print name.first.katakana # ヒトセ
+print(name)                # 川端 一世 
+print(name.kanji)          # 川端 一世
+print(name.hiragana)       # かわばた ひとせ
+print(name.katakana)       # カワバタ ヒトセ
+print(name.last.kanji)     # 川端
+print(name.last.hiragana)  # かわばた
+print(name.last.katakana)  # カワバタ
+print(name.first.kanji)    # 一世
+print(name.first.hiragana) # ひとせ
+print(name.first.katakana) # ヒトセ
 
 
-address = Gimei().address 
+address = Gimei().address
 
-print address             # 大分県三潴郡大木町小原西
-print address.kanji       # 大分県三潴郡大木町小原西
-print address.hiragana    # おおいたけんみずまぐんおおきまちこばらにし
-print address.katakana    # オオイタケンミズマグンオオキマチコバラニシ
+# print(address)             # (未実装) 大分県三潴郡大木町小原西 
+print(address.kanji)       # 大分県三潴郡大木町小原西
+print(address.hiragana)    # おおいたけんみずまぐんおおきまちこばらにし
+print(address.katakana)    # オオイタケンミズマグンオオキマチコバラニシ
 
-print address.prefecture.kanji     # 大分県
-print address.prefecture.hiragana  # おおいたけん
-print address.prefecture.katakana  # オオイタケン
+print(address.prefecture.kanji)     # 大分県
+print(address.prefecture.hiragana)  # おおいたけん
+print(address.prefecture.katakana)  # オオイタケン
 
-print address.city.kanji     # 三潴郡大木町
-print address.city.hiragana  # みずまぐんおおきまち
-print address.city.katakana  # ミズマグンオオキマチ
+print(address.city.kanji)     # 三潴郡大木町
+print(address.city.hiragana)  # みずまぐんおおきまち
+print(address.city.katakana)  # ミズマグンオオキマチ
 
-print address.town.kanji     # 小原西
-print address.town.hiragana  # こばらにし
-print address.town.katakana  # コバラニシ
+print(address.town.kanji)     # 小原西
+print(address.town.hiragana)  # こばらにし
+print(address.town.katakana)  # コバラニシ
 ```
 
 ## Recommendation
