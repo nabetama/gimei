@@ -1,6 +1,6 @@
 # Gimei
 
-[![test](https://github.com/youpong/py-gimei/actions/workflows/test.yaml/badge.svg)](https://github.com/youpong/py-gimei/actions/workflows/test.yaml)
+[![test](https://github.com/nabetama/gimei/actions/workflows/test.yaml/badge.svg)](https://github.com/nabetama/gimei/actions/workflows/test.yaml)
 
 This package generates the name and the address at random.
 
