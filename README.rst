@@ -1,6 +1,8 @@
 Gimei
 =====
 
+|test|
+
 This package generates the name and the address at random.
 
 Original is `gimei <https://github.com/willnet/gimei>`__. Thank’s
@@ -81,3 +83,6 @@ Author
 Mao Nabeta
 
 `twitter <https://twitter.com/nabetama>`__
+
+.. |test| image:: https://github.com/youpong/py-gimei/actions/workflows/test.yaml/badge.svg
+   :target: https://github.com/youpong/py-gimei/actions/workflows/test.yaml
