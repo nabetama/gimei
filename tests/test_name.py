@@ -22,6 +22,13 @@ class TestName(object):
         name.last.all  = ['大木', 'おおき', 'オオキ']
         assert str(name) == '大木 糸央'
 
+    def test_repr(self):
+        name = Gimei().name
+        name.gender    = 'female'
+        name.first.all = ['七祐', 'なゆ', 'ナユ']
+        name.last.all  = ['佐野', 'さの', 'サノ']
+        assert repr(name) == "Name(gender='female', first=['七祐', 'なゆ', 'ナユ'], last=['佐野', 'さの', 'サノ'])"
+
     def test_create_name_from_gender(self):
         name = Gimei('male').name
         assert name.is_male
