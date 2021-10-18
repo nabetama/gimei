@@ -84,5 +84,5 @@ Mao Nabeta
 
 `twitter <https://twitter.com/nabetama>`__
 
-.. |test| image:: https://github.com/youpong/py-gimei/actions/workflows/test.yaml/badge.svg
-   :target: https://github.com/youpong/py-gimei/actions/workflows/test.yaml
+.. |test| image:: https://github.com/nabetama/gimei/actions/workflows/test.yaml/badge.svg
+   :target: https://github.com/nabetama/gimei/actions/workflows/test.yaml
