@@ -16,6 +16,12 @@ class TestName(object):
         name = Gimei().name
         assert Name.find_name_by_katakana(name.katakana)
 
+    def test_str(self):
+        name = Gimei().name
+        name.first.all = ['糸央', 'いお', 'イオ']
+        name.last.all  = ['大木', 'おおき', 'オオキ']
+        assert str(name) == '大木 糸央'
+
     def test_repr(self):
         name = Gimei().name
         name.gender    = 'female'

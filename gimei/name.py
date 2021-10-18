@@ -88,6 +88,9 @@ class Name(object):
         from .gimei import FEMALE
         return self.gender == FEMALE
 
+    def __str__(self):
+        return self.kanji
+
     def __repr__(self):
         return "Name(gender='{}', first={}, last={})".format(self.gender,
                                                              self.first.all, self.last.all)
