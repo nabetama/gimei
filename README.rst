@@ -48,7 +48,7 @@ Usage
 
    address = Gimei().address
 
-   # print(address)             # (未実装) 大分県三潴郡大木町小原西 
+   print(address)             # 大分県三潴郡大木町小原西 
    print(address.kanji)       # 大分県三潴郡大木町小原西
    print(address.hiragana)    # おおいたけんみずまぐんおおきまちこばらにし
    print(address.katakana)    # オオイタケンミズマグンオオキマチコバラニシ

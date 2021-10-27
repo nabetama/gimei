@@ -108,8 +108,12 @@ class Address(object):
             self.town.katakana,
         )
 
+    def __str__(self):
+        return self.kanji
+
     def __repr__(self):
-        return self.kanji.encode('utf-8')
+        return "Address(prefecture={}, city={}, town={})".format(
+            self.prefecture.prefectures, self.city.cities, self.town.towns)
 
     @classmethod
     def get_prefectures(cls):
