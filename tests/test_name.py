@@ -1,4 +1,5 @@
 # coding: utf-8
+import pytest
 from gimei import Gimei
 from gimei import Name
 
@@ -16,19 +17,6 @@ class TestName(object):
         name = Gimei().name
         assert Name.find_name_by_katakana(name.katakana)
 
-    def test_str(self):
-        name = Gimei().name
-        name.first.all = ['糸央', 'いお', 'イオ']
-        name.last.all  = ['大木', 'おおき', 'オオキ']
-        assert str(name) == '大木 糸央'
-
-    def test_repr(self):
-        name = Gimei().name
-        name.gender    = 'female'
-        name.first.all = ['七祐', 'なゆ', 'ナユ']
-        name.last.all  = ['佐野', 'さの', 'サノ']
-        assert repr(name) == "Name(gender='female', first=['七祐', 'なゆ', 'ナユ'], last=['佐野', 'さの', 'サノ'])"
-
     def test_create_name_from_gender(self):
         name = Gimei('male').name
         assert name.is_male
@@ -36,3 +24,18 @@ class TestName(object):
     def test_create_name_from_gender(self):
         name = Gimei('female').name
         assert name.is_female
+
+
+@pytest.fixture
+def name():
+    name = Gimei().name
+    name.gender    = 'female'    
+    name.first.all = ['七祐', 'なゆ', 'ナユ']
+    name.last.all  = ['佐野', 'さの', 'サノ']
+    return name
+
+def test_str(name):
+    assert str(name) == '佐野 七祐'
+
+def test_repr(name):
+    assert repr(name) == "Name(gender='female', first=['七祐', 'なゆ', 'ナユ'], last=['佐野', 'さの', 'サノ'])"
