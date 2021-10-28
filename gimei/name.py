@@ -111,16 +111,12 @@ class Name(object):
                 result.append(_names[idx])
                 break
 
-        for _names in first_names[MALE]:
-            if _names[idx] == token[1]:
-                result.append(token[1])
-                break
-
-        if len(result) != 2:
-            for _names in first_names[FEMALE]:
-                if _names[idx] == token[1]:
-                    result.append(token[1])
-                    break
+        for gender in [MALE, FEMALE]:
+            if len(result) != 2:
+                for _names in first_names[gender]:
+                    if _names[idx] == token[1]:
+                        result.append(token[1])
+                        break
 
         if len(result) == 2:
             return result
