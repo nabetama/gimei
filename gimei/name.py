@@ -110,21 +110,23 @@ class Name(object):
             if _names[idx] == token[0]:
                 result.append(_names[idx])
                 break
+        else:
+            return None
 
         for _names in first_names[MALE]:
             if _names[idx] == token[1]:
                 result.append(token[1])
                 break
-
-        if len(result) != 2:
+        else:
             for _names in first_names[FEMALE]:
                 if _names[idx] == token[1]:
                     result.append(token[1])
                     break
+            else:
+                return None
 
-        if len(result) == 2:
-            return result
-        return None
+        return result
+
 
     @classmethod
     def find_name_by_kanji(cls, kanji):
