@@ -16,6 +16,12 @@ class TestName(object):
         name = Gimei().name
         assert Name.find_name_by_katakana(name.katakana)
 
+    def test_find_name(self):
+        assert Name.find_name_by_kanji('山田 太郎') == ['山田', '太郎']
+        assert Name.find_name_by_kanji('山田 花') == ['山田', '花']
+        assert Name.find_name_by_kanji('未入力 太郎') == None
+        assert Name.find_name_by_kanji('未入力 凛') == None # ISSUE_15
+
     def test_str(self):
         name = Gimei().name
         name.first.all = ['糸央', 'いお', 'イオ']
