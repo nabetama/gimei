@@ -32,12 +32,15 @@ print(name)                # 川端 一世
 print(name.kanji)          # 川端 一世
 print(name.hiragana)       # かわばた ひとせ
 print(name.katakana)       # カワバタ ヒトセ
+print(name.romaji)         # Hitose Kawabata
 print(name.last.kanji)     # 川端
 print(name.last.hiragana)  # かわばた
 print(name.last.katakana)  # カワバタ
+print(name.last.romaji)    # Kawabata
 print(name.first.kanji)    # 一世
 print(name.first.hiragana) # ひとせ
 print(name.first.katakana) # ヒトセ
+print(name.first.romaji)   # Hitose
 
 
 address = Gimei().address
