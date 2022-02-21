@@ -26,6 +26,10 @@ class name(object):
     def katakana(self):
         return self.all[2]
 
+    @property
+    def romaji(self):
+        return self.all[3].title()
+
     @classmethod
     def get_all_names(cls):
         from .gimei import Gimei
@@ -79,6 +83,13 @@ class Name(object):
         )
 
     @property
+    def romaji(self):
+        return u"{} {}".format(
+            self.first.romaji,            
+            self.last.romaji,
+        )
+
+    @property
     def is_male(self):
         from .gimei import MALE
         return self.gender == MALE
@@ -103,6 +114,8 @@ class Name(object):
         token = name.split(' ')
         if len(token) != 2:
             return None
+        if idx == 3:
+            ( token[0], token[1] ) = ( token[1].lower(), token[0].lower() )
         first_names = first_name.get_all_names()
         last_names = last_name.get_all_names()
 
@@ -137,3 +150,7 @@ class Name(object):
     @classmethod
     def find_name_by_katakana(cls, katakana):
         return cls.find_name_by_index(katakana, 2)
+
+    @classmethod
+    def find_name_by_romaji(cls, romaji):
+        return cls.find_name_by_index(romaji, 3)
